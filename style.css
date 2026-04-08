@@ -4,6 +4,7 @@ body {
 
 input {
     font-size: 24px;
+    min-width: 400px;
 }
 
 .country-info img {

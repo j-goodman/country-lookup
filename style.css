@@ -50,6 +50,10 @@ input {
     max-width: min(100%, 520px);
 }
 
+.country-info img.non-rectangle {
+    box-shadow: none;
+}
+
 .country-info img, p {
     font-size: 1.25em;
     max-width: 500px;

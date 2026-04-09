@@ -3,6 +3,25 @@ const countryFlag = document.getElementById("country-flag")
 const countryDescription = document.getElementById("country-description")
 const inputBox = document.getElementById("input-box")
 
+const mainSection = document.getElementById("main-section")
+const aboutSection = document.getElementById("about-section")
+const mainButton = document.getElementById("main-section-button")
+const aboutButton = document.getElementById("about-section-button")
+
+mainButton.addEventListener("click", () => {
+    mainSection.classList.remove("invisible")
+    aboutSection.classList.add("invisible")
+    mainButton.classList.add("active")
+    aboutButton.classList.remove("active")
+})
+
+aboutButton.addEventListener("click", () => {
+    aboutSection.classList.remove("invisible")
+    mainSection.classList.add("invisible")
+    aboutButton.classList.add("active")
+    mainButton.classList.remove("active")
+})
+
 document.addEventListener("keypress", (event) => {
     if (event.key === "Enter") {
         requestCountryInfo(inputBox.value)
@@ -16,7 +35,6 @@ async function requestCountryInfo (countryName) {
     let correctCountry = countries[0]
 
     for (let i = 0; i < countries.length; i++) {
-        console.log(countries[i])
         if (countries[i].name.common === countryName) {
             correctCountry = countries[i]
         }
@@ -26,7 +44,6 @@ async function requestCountryInfo (countryName) {
 }
 
 const addInformationToPage = (country) => {
-    window.country = country
     countryName.innerText = country.name.common
     countryFlag.src = country.flags.svg
     countryFlag.alt = country.flags.alt

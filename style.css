@@ -1,12 +1,76 @@
 body {
-    font-family: sans-serif;
+    align-items: center;
+    color: #162033;
+    display: flex;
+    flex-direction: column;
+    font-family: "Atkinson Hyperlegible", sans-serif;
+    font-size: 16px;
+    justify-content: center;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.main {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 40px;
+    max-width: 900px;
 }
 
 input {
+    font-family: inherit;
     font-size: 24px;
-    min-width: 400px;
+    min-width: 420px;
+    padding: 12px 28px;
+    border-radius: 100px;
+}
+
+.country-info {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 32px;
+}
+
+.country-info > p {
+    margin-top: 18px;
 }
 
 .country-info img {
-    max-width: 400px;
+    box-shadow: 5px 5px 50px 0px rgba(0, 0, 0, 0.2);
+}
+
+.country-info img, p {
+    font-size: 1.25em;
+    max-width: 520px;
+}
+
+.header {
+    align-items: center;
+    background-color: rgba(232, 238, 248);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.header div {
+    font-size: 1.5em;
+    margin: 8px 30px 0 30px;
+    padding: 16px 36px;
+}
+
+.header div:not(.active) {
+    cursor: pointer;
+}
+
+.invisible {
+    display: none;
+}
+
+.active {
+    background-color: #fff;
 }

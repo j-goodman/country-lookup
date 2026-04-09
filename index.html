@@ -4,16 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Country Lookup</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="earth.png" type="image/png">
     <script defer src="script.js"></script>
 </head>
 <body>
-    <input id="input-box" type="text" placeholder="Type a country here and press enter.">
-    <section class="country-info">
-        <h1 id="country-name"></h1>
-        <img id="country-flag" src="" alt="">
-        <p id="country-description"></p>
+    <section class="header">
+        <div class="active" id="main-section-button">Country Search</div>
+        <div id="about-section-button">About</div>
+    </section>
+    <section class="main" id="main-section">
+        <input id="input-box" type="text" placeholder="🔍 Type a country here and press enter.">
+        <section class="country-info">
+            <h1 id="country-name"></h1>
+            <img id="country-flag" src="" alt="">
+            <p id="country-description"></p>
+        </section>
+    </section>
+    <section class="about invisible" id="about-section">
+        <h1>Country Search Tool</h1>
+        <p>This tool uses the <a href="https://restcountries.com/">REST Countries API</a> to allow users to find information about the nations of the world.</p>
+        <p>Try typing the name of a country into the search bar and pressing enter.</p>
     </section>
 </body>
 </html>

@@ -31,12 +31,12 @@ document.addEventListener("keypress", (event) => {
 
 async function requestCountryInfo (countryName) {
     const response = await fetch(`https://restcountries.com/v3.1/name/${countryName}`)
+
     if (response.status === 404) {
-        console.log("!!!!!")
-        console.log(countryName)
-        page.countryName.innerText = "I am error."
+        page.countryName.innerText = `Couldn't find ${countryName}.`
         return false
     }
+    
     const countries = await response.json()
 
     let correctCountry = countries[0]

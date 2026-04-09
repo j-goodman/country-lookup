@@ -35,7 +35,7 @@ async function requestCountryInfo (countryName) {
     let correctCountry = countries[0]
 
     for (let i = 0; i < countries.length; i++) {
-        if (countries[i].name.common === countryName) {
+        if (countries[i].name.common.toUpperCase() === countryName.toUpperCase()) {
             correctCountry = countries[i]
         }
     }
@@ -47,5 +47,5 @@ const addInformationToPage = (country) => {
     countryName.innerText = country.name.common
     countryFlag.src = country.flags.svg
     countryFlag.alt = country.flags.alt
-    countryDescription.innerText = `${country.name.official} is a country in ${country.subregion} with a population of ${country.population.toLocaleString()}. The capital of ${country.name.common} is ${country.capital}.`
+    countryDescription.innerText = `${useThe(country.name.official) ? "The " : ""}${country.name.official} is a country in ${useThe(country.subregion) ? "the " : ""}${country.subregion} with a population of ${country.population.toLocaleString()}. Its capital is ${country.capital}.${country.landlocked ? ` ${country.name.common} is landlocked.` : ``}`
 }

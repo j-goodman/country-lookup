@@ -34,9 +34,12 @@ async function requestCountryInfo (countryName) {
 
     if (response.status === 404) {
         page.countryName.innerText = `Couldn't find ${countryName}.`
+        page.countryFlag.src = null
+        page.countryFlag.alt = ``
+        page.countryDescription = ``
         return false
     }
-    
+
     const countries = await response.json()
 
     let correctCountry = countries[0]
@@ -54,5 +57,5 @@ const addInformationToPage = (country) => {
     page.countryName.innerText = country.name.common
     page.countryFlag.src = country.flags.svg
     page.countryFlag.alt = country.flags.alt
-    page.countryDescription.innerText = `${useThe(country.name.official) ? "The " : ""}${country.name.official} is a country in ${useThe(country.subregion) ? "the " : ""}${country.subregion} with a population of ${country.population.toLocaleString()}. Its capital is ${country.capital}.${country.landlocked ? ` ${country.name.common} is landlocked.` : ``}`
+    page.countryDescription.innerText = `${useThe(country.name.official) ? "The " : ""}${country.name.official} is a country in ${useThe(country.subregion) ? "the " : ""}${country.subregion} with a population of ${country.population.toLocaleString()}. Its capital is ${country.capital.join("/")}.${country.landlocked ? ` ${country.name.common} is landlocked.` : ``} \n \n ${country.flags.alt}`
 }

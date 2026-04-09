@@ -4,10 +4,11 @@ body {
     display: flex;
     flex-direction: column;
     font-family: "Atkinson Hyperlegible", sans-serif;
-    font-size: 16px;
+    font-size: 15px;
     justify-content: center;
-    line-height: 1.5;
+    line-height: 1.35;
     margin: 0;
+    padding: 0 16px 32px;
 }
 
 .main {
@@ -15,16 +16,19 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 40px;
+    margin: 32px auto 0;
     max-width: 900px;
+    width: 100%;
 }
 
 input {
+    border: 1px solid #c7d4e6;
+    border-radius: 100px;
     font-family: inherit;
     font-size: 24px;
-    min-width: 420px;
+    max-width: 100%;
     padding: 12px 28px;
-    border-radius: 100px;
+    width: min(100%, 420px);
 }
 
 .country-info {
@@ -32,35 +36,46 @@ input {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: 32px;
+    margin-top: 8px;
+    width: 100%;
 }
 
 .country-info > p {
-    margin-top: 18px;
+    margin-top: 16px;
+    text-align: center;
 }
 
 .country-info img {
     box-shadow: 5px 5px 50px 0px rgba(0, 0, 0, 0.2);
+    height: auto;
+    max-width: min(100%, 520px);
 }
 
 .country-info img, p {
     font-size: 1.25em;
-    max-width: 520px;
+    max-width: 500px;
 }
 
 .header {
     align-items: center;
     background-color: rgb(217, 230, 244);
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     width: 100%;
 }
 
 .header div {
     font-size: 1.5em;
-    margin: 8px 30px 0 30px;
+    margin: 8px 12px 0;
     padding: 16px 36px;
+    text-align: center;
+}
+
+.about {
+    max-width: 700px;
+    padding: 24px 0;
+    width: 100%;
 }
 
 .header div:not(.active) {

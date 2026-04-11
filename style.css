@@ -4,11 +4,10 @@ body {
     display: flex;
     flex-direction: column;
     font-family: "Atkinson Hyperlegible", sans-serif;
-    font-size: 15px;
+    font-size: 14px;
     justify-content: center;
     line-height: 1.35;
     margin: 0;
-    padding: 0 16px 32px;
 }
 
 .main {
@@ -16,7 +15,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 32px auto 0;
+    margin: 28px auto 0;
     max-width: 900px;
     width: 100%;
 }
@@ -27,8 +26,8 @@ input {
     font-family: inherit;
     font-size: 24px;
     max-width: 100%;
-    padding: 12px 28px;
-    width: min(100%, 420px);
+    padding: 10px 28px;
+    width: 420px;
 }
 
 .country-info {
@@ -47,7 +46,7 @@ input {
 .country-info img {
     box-shadow: 5px 5px 50px 0px rgba(0, 0, 0, 0.2);
     height: auto;
-    max-width: min(100%, 520px);
+    max-width: 520px;
 }
 
 .country-info img.non-rectangle {
@@ -71,13 +70,13 @@ input {
 .header div {
     font-size: 1.5em;
     margin: 8px 12px 0;
-    padding: 16px 36px;
+    padding: 14px 36px;
     text-align: center;
 }
 
 .about {
     max-width: 700px;
-    padding: 24px 0;
+    padding: 22px 0;
     width: 100%;
 }
 
